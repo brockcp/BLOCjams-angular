@@ -1,15 +1,16 @@
 (function(){
   function SongPlayer(){
     var SongPlayer = {}; //this service return this object making it public to the greater app
-
+    /**
+    * @desc Holds current song number
+    * @type {Number}
+    */
     var currentSong = null;
-
     /**
     * @desc Buzz object audio file
     * @type {Object}
     */
     var currentBuzzObject = null;
-
 
     /**
     * @function setSong
@@ -28,23 +29,46 @@
         });
         currentSong = song;
      };
-    SongPlayer.play = function(song) {
-      if(currentSong !== song){
-        setSong(song);
-        currentBuzzObject.play();
-        song.playing = true;
-      } else if(currentSong === song){
-        if(currentBuzzObject.isPaused()){
-          currentBuzzObject.play();
-        }
-      }
-    };
-    SongPlayer.pause = function(song) {
-      currentBuzzObject.pause();
-      song.playing = false;
-    };
-  return SongPlayer;
-}
+     /**
+     * @function playSong
+     * @desc Plays current song and sets song.playing to true
+     * @param {Object} song
+     */
+     var playSong = function(song) {
+         currentBuzzObject.play();
+         song.playing = true;
+     };
+
+     /**
+     * @function SongPlayer.play
+     * @desc Plays current song if paused, or selected song
+     * @param {Object} song
+     */
+     SongPlayer.play = function(song) {
+         if (currentSong !== song) {
+
+             setSong(song);
+             playSong(song);
+
+         } else if (currentSong === song) {
+             if (currentBuzzObject.isPaused()) {
+                 playSong(song);
+             }
+         }
+     };
+
+     /**
+     * @function SongPlayer.pause
+     * @desc Pauses current song
+     * @param {Object} song
+     */
+     SongPlayer.pause = function(song) {
+         currentBuzzObject.pause();
+         song.playing = false;
+     };
+
+     return SongPlayer;
+ }
 
   angular
     .module('blocJams')
