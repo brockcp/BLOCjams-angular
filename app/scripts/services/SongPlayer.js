@@ -26,14 +26,11 @@
             formats: ['mp3'],
             preload: true
         });
-
         currentSong = song;
      };
-
     SongPlayer.play = function(song) {
       if(currentSong !== song){
         setSong(song);
-
         currentBuzzObject.play();
         song.playing = true;
       } else if(currentSong === song){
@@ -42,15 +39,12 @@
         }
       }
     };
-
     SongPlayer.pause = function(song) {
       currentBuzzObject.pause();
       song.playing = false;
     };
-
   return SongPlayer;
 }
-
 
   angular
     .module('blocJams')
