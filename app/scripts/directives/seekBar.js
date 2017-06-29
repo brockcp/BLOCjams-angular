@@ -1,5 +1,5 @@
 (function() {
-  function seekBar(){
+  function seekBar($document){
     var calculatePercent = function(seekBar, event) { //calculates horizontal % on seek bar
     var offsetX = event.pageX - seekBar.offset().left;
     var seekBarWidth = seekBar.width();
@@ -19,9 +19,11 @@
         scope.value = 0;  //value of seek bar
         scope.max = 100;  //max value
         var seekBar = $(element); //element that matches directive as jQuery object
+
         attributes.$observe('value', function(newValue){
           scope.value = newValue;
         });
+
         attributes.$observe('max', function(newValue){
           scope.max = newValue;
         });
@@ -67,7 +69,7 @@
           }
         };
       } //end link function
-    };
+    }; //end seekBars return
   }
 
   angular

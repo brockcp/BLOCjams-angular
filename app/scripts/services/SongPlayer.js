@@ -1,6 +1,11 @@
 (function(){
   function SongPlayer($rootScope, Fixtures){
     var SongPlayer = {}; //this service returns this object making public
+
+    /**
+    * @desc current album
+    * @type {Object}
+    */
     var currentAlbum = Fixtures.getAlbum();
 
     /**
@@ -22,7 +27,7 @@
             formats: ['mp3'],
             preload: true
         });
-        currentBuzzObject.bind('timeUpdate', function(){
+        currentBuzzObject.bind('timeupdate', function(){
           $rootScope.$apply(function(){
             SongPlayer.currentTime = currentBuzzObject.getTime();
           });
@@ -72,6 +77,12 @@
      * @type {Number}
      */
      SongPlayer.currentTime = null;
+
+     /**
+     * @desc current Volume
+     * @type {Number}
+     */
+     SongPlayer.volume = null;
 
      /**
      * @function play
@@ -143,6 +154,17 @@
       SongPlayer.setCurrentTime = function(time) { //checks if currentBuzzObject, if so uses 'setTime' to set to seconds
         if (currentBuzzObject) {
           currentBuzzObject.setTime(time);
+        }
+      };
+
+      /**
+      * @function setVolume
+      * @desc sets Volume
+      * @param {Number} Volume
+      */
+      SongPlayer.setVolume = function(volume){
+        if(currentBuzzObject){
+          currentBuzzObject.setVolume(volume);
         }
       };
 
