@@ -24,7 +24,7 @@
           stopSong(SongPlayer.currentSong);
         }
         currentBuzzObject = new buzz.sound(song.audioUrl, {
-            formats: ['mp3'],
+            formats: ['m4a'],
             preload: true
         });
         currentBuzzObject.bind('timeupdate', function(){
