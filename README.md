@@ -10,8 +10,8 @@
 
 ### Technologies used:
 
-- Built with **Vanilla javascript** and **jQuery**
+- Built with **AngularJS**
 
 ### Background:
 
-- I built Bloc-Jams-Javascript in May 2017 during the frontend phase of my web developer program at Bloc. This project relies heavily on vanilla javascript of which I had to dig in deep on in order to complete this project.
+- I built Bloc-Jams-Angular in June 2017 during the backend phase of my web developer program at Bloc. This project was built entirely with AngularJS within the MVC framework.
