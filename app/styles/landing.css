@@ -26,22 +26,24 @@ body.landing{
  .selling-points {
      position: relative;
  }
- .point {
-     position: relative;
-     padding: 2rem;
-     text-align: center;
-     opacity: 1;
 
-     -webkit-transform: scaleX(0.4) translateY(6rem);
-     -moz-transform: scaleX(0.4) translateY(6rem);
-     transform: scaleX(.4) translateY(6rem);
-     -webkit-transition: all 1s ease-in-out;
-     -moz-transition: all 1s ease-in-out;
-     transition: all 1s ease-in-out;
-     -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-     transition-delay: 0.2s;
+ .point {
+   position: relative;
+   padding: 2rem;
+   text-align: center;
+   opacity: 1;
+   animation-name: bloc-jams-anination;
+   animation-duration: 1s;
+   transition: all 1s ease-in-out;
+   transition-delay: .2s;
  }
+ @keyframes bloc-jams-anination{
+   0%{transform: scaleX(.4) translateY(6rem)}
+   25%{transform: scaleX(.4) translateY(6rem)}
+   50%{transform: scaleX(.4) translateY(6rem)}
+   75%{transform: scaleX(.4) translateY(6rem)}
+ }
+
  .point .point-title {
      font-size: 1.25rem;
  }
