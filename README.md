@@ -1,6 +1,6 @@
-# Bloc-Jams-Angular
+# BrockJams-Angular
 
-- **Bloc-Jams-Angular** is a music playing app built on Angularjs.
+- **BrockJams-Angular** is a music playing app built on Angularjs.
 
 ### Features:
 
@@ -14,4 +14,4 @@
 
 ### Background:
 
-- I built Bloc-Jams-Angular in June 2017 during the backend phase of my web developer program at Bloc. This project was built entirely with AngularJS within the MVC framework.
+- I built BrockJams-Angular in June 2017 during the backend phase of my web developer program at Bloc. This project was built entirely with AngularJS within the MVC framework.
