@@ -143,14 +143,47 @@
               ]}
         var catalog = [album1, album2, album3, album4]
 
+        var albumPicasso = {
+            id:0,
+            title: 'The Colors',
+            artist: 'Pablo Picasso',
+            label: 'Cubism',
+            year: '1881',
+            albumArtUrl: '/assets/images/album_covers/20.png',
+            songs: [
+                { title: 'Blue', duration: 161.71, audioUrl: 'assets/music/blue'},
+                { title: 'Green', duration: 103.96, audioUrl: 'assets/music/green'},
+                { title: 'Red', duration: 268.45, audioUrl: 'assets/music/red'},
+                { title: 'Pink', duration: 153.14, audioUrl: 'assets/music/pink'},
+                { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/magenta'}
+            ]
+        };
+        var albumMarconi = {
+            id:1,
+            title: 'The Numbers',
+            artist: 'Number Man',
+            label: 'EM',
+            year: '1909',
+            albumArtUrl: '/assets/images/album_covers/19.png',
+            songs: [
+              { title: 'one', duration: 161.71, audioUrl: 'assets/music/blue'},
+              { title: 'two', duration: 103.96, audioUrl: 'assets/music/green'},
+              { title: 'three', duration: 268.45, audioUrl: 'assets/music/red'},
+              { title: 'four', duration: 153.14, audioUrl: 'assets/music/pink'},
+              { title: 'five', duration: 374.22, audioUrl: 'assets/music/magenta'}
+            ]
+        };
+    //console.log(albumPicasso);
+        var albumss = [albumPicasso, albumMarconi];
+
     Fixtures.getAlbum = function(){
       var chosenAlbumId = $rootScope.getAlbumId;
-      return catalog[chosenAlbumId];
+      return albumss[chosenAlbumId];
     };
     Fixtures.getCollection = function() {
         var albumCollection = [];
-        for (var i=0; i < catalog.length; i++) {
-            albumCollection.push(catalog[i]);
+        for (var i=0; i < albumss.length; i++) {
+            albumCollection.push(albumss[i]);
         }
         return albumCollection;
     };
