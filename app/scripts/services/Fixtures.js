@@ -3,187 +3,132 @@
     var Fixtures = {};
 
     var musicLibrary = [
-          {
+      {
+      id:0,
+      title: 'Summer In Abaddon',
+      artist: 'Pinback',
+      label: 'Alternative',
+      year: '2004',
+      albumArtUrl: 'assets/images/album_covers/SummerInAbaddon.png',
+      songs: [
+        { title: 'Non Photo-Blue', duration: 223, audioUrl: 'assets/music/Non-Photo-Blue'},
+        { title: 'Fortress', duration: 299, audioUrl: 'assets/music/Fortress'},
+        { title: 'Syracuse', duration: 230, audioUrl: 'assets/music/Syracuse'},
+        { title: 'Sender', duration: 298, audioUrl: 'assets/music/Sender'}
+      ]
+      },
+      {
+      id:1,
+      title: 'Strange Trails',
+      artist: 'Lord Huron',
+      label: 'Indie Rock',
+      year: '2015',
+      albumArtUrl: 'assets/images/album_covers/StrangeTrails.png',
+      songs: [
+        {title: 'Fool For Love', duration:275, audioUrl: 'assets/music/FoolForLove'},
+        {title: 'Dead Man\'s Hand', duration:261, audioUrl: 'assets/music/DeadMansHand'},
+        {title: 'The Night We Met', duration: 203, audioUrl: 'assets/music/TheNightWeMet'},
+        {title: 'Way Out There', duration:250, audioUrl: 'assets/music/WayOutThere'}
+      ]
+      },
+      {
+      id:2,
+      title: 'Ok Computer',
+      artist: 'Radiohead',
+      label: 'Alternative',
+      year: '1997',
+      albumArtUrl: 'assets/images/album_covers/OkComputer.png',
+      songs: [
+        {title: 'Airbag', duration:284, audioUrl: 'assets/music/Airbag'},
+        {title: 'Paranoid Android', duration:384, audioUrl: 'assets/music/ParanoidAndroid'},
+        {title: 'Subterranean Homesick Alien', duration:268, audioUrl: 'assets/music/SubterraneanHomesickAlien'},
+        {title: 'Let Down', duration:299, audioUrl: 'assets/music/LetDown'},
+        {title: 'Karma Police', duration:262, audioUrl: 'assets/music/KarmaPolice'},
+        {title: 'No Surprises', duration:229, audioUrl: 'assets/music/NoSurprises'}
+      ]
+      },
+      {
+      id:3,
+      title: 'Summer Winter',
+      artist: 'Fialta',
+      label: 'Alternative',
+      year: '2013',
+      albumArtUrl: 'assets/images/album_covers/SummerWinter.png',
+      songs: [
+        {title: 'Photographs', duration:235, audioUrl: 'assets/music/Photographs'},
+        {title: 'Baby, I', duration:227, audioUrl: 'assets/music/BabyI'},
+        {title: 'Cars', duration:219, audioUrl: 'assets/music/Cars'}
+      ]
+      }
+    ];
+
+    var SummerInAbaddon ={
             id:0,
-            title: 'OK Computer',
+            title: 'Summer In Abaddon',
+            artist: 'Pinback',
+            label: 'Alternative',
+            year: '2004',
+            albumArtUrl: 'assets/images/album_covers/SummerInAbaddon.png',
+            songs: [
+              { title: 'Non Photo-Blue', duration: 223, audioUrl: 'assets/music/Non-Photo-Blue'},
+              { title: 'Fortress', duration: 299, audioUrl: 'assets/music/Fortress'},
+              { title: 'Syracuse', duration: 230, audioUrl: 'assets/music/Syracuse'},
+              { title: 'Sender', duration: 298, audioUrl: 'assets/music/Sender'}
+            ]
+      }
+    var StrangeTrails = {
+            id:1,
+            title: 'Strange Trails',
+            artist: 'Lord Huron',
+            label: 'Indie Rock',
+            year: '2015',
+            albumArtUrl: 'assets/images/album_covers/StrangeTrails.png',
+            songs: [
+              {title: 'Fool For Love', duration:275, audioUrl: 'assets/music/FoolForLove'},
+              {title: 'Dead Man\'s Hand', duration:261, audioUrl: 'assets/music/DeadMansHand'},
+              {title: 'The Night We Met', duration: 203, audioUrl: 'assets/music/TheNightWeMet'},
+              {title: 'Way Out There', duration:250, audioUrl: 'assets/music/WayOutThere'}
+            ]
+      }
+    var OkComputer = {
+            id:2,
+            title: 'Ok Computer',
             artist: 'Radiohead',
             label: 'Alternative',
             year: '1997',
-            albumArtUrl: 'assets/images/album_covers/003.png',
+            albumArtUrl: 'assets/images/album_covers/OkComputer.png',
             songs: [
-              { title: 'Blueairbag', duration: 161.71, audioUrl: 'assets/music/airbag'},
-              { title: 'Green', duration: 103.96, audioUrl: 'assets/music/green'},
-              { title: 'Red', duration: 268.45, audioUrl: 'assets/music/red'},
-              { title: 'Pink', duration: 153.14, audioUrl: 'assets/music/pink'},
-              { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/magenta'}
-              // {title: 'Airbag', duration:'3:43'},
-              // {title: 'Paranoid Android', duration:'4;44'},
-              // {title: 'Subterranean Homesick Alien', duration:'6:23'},
-              // {title: 'Exit Music', duration:'8:32'},
-              // {title: 'Let Down', duration:'5:15'},
-              // {title: 'Karma Police', duration:'3:35'},
-              // {title: 'Fitter Happier', duration:'2:25'},
-              // {title: 'Electioneering', duration:'5:55'}
-            ]},
-          {
-            id:1,
-            title: 'Information Retrieved',
-            artist: 'Pinback',
-            label: 'Alternative',
-            year: '2012',
-            albumArtUrl: 'assets/images/album_covers/002.png',
-            songs: [
-              {title: 'Proceed To Memory', duration:'3:43'},
-              {title: 'Glide', duration:'4;44'},
-              {title: 'Drawstring', duration:'6:23'},
-              {title: 'Sherman', duration:'5:32'},
-              {title: 'His Phase', duration:'5:65'},
-              {title: 'Diminished', duration:'5:65'},
-              {title: 'True North', duration:'5:65'}
-            ]},
-          {
-            id:2,
-            title: 'The Chief Assassin To The Sinister',
-            artist: 'Three Mile Pilot',
-            label: 'Rock',
-            year: '1995',
-            albumArtUrl: 'assets/images/album_covers/004.png',
-            songs: [
-              {title: 'Shang Vs. Hanger', duration:'3:43'},
-              {title: 'Circumcised', duration:'4;44'},
-              {title: 'Aqua-Magnetic', duration:'6:23'},
-              {title: 'The Chief Assassin to the Sinister', duration:'5:32'},
-              {title: '97-MT', duration:'5:65'}
-            ]},
-          {
+              {title: 'Airbag', duration:284, audioUrl: 'assets/music/Airbag'},
+              {title: 'Paranoid Android', duration:384, audioUrl: 'assets/music/ParanoidAndroid'},
+              {title: 'Subterranean Homesick Alien', duration:268, audioUrl: 'assets/music/SubterraneanHomesickAlien'},
+              {title: 'Let Down', duration:299, audioUrl: 'assets/music/LetDown'},
+              {title: 'Karma Police', duration:262, audioUrl: 'assets/music/KarmaPolice'},
+              {title: 'No Surprises', duration:229, audioUrl: 'assets/music/NoSurprises'}
+            ]
+      };
+    var SummerWinter = {
           id:3,
-          title: 'Lonesome Dreams',
-          artist: 'Lord Huron',
+          title: 'Summer Winter',
+          artist: 'Fialta',
           label: 'Alternative',
-          year: '2012',
-          albumArtUrl: 'assets/images/album_covers/001.png',
+          year: '2013',
+          albumArtUrl: 'assets/images/album_covers/SummerWinter.png',
           songs: [
-            {title: 'Ends of the Earth', duration:'3:43'},
-            {title: 'Time to Run', duration:'4;44'},
-            {title: 'Lonesome Dreams', duration:'6:23'},
-            {title: 'She Lit a Fire', duration:'5:32'},
-            {title: 'I Will Be Back One Day', duration:'5:65'}
-          ]}
-        ];
-
-        var album1 =
-              {
-                id:0,
-                title: 'OK Computer',
-                artist: 'Radiohead',
-                label: 'Alternative',
-                year: '1997',
-                albumArtUrl: 'assets/images/album_covers/003.png',
-                songs: [
-                  { title: 'Blueairbag', duration: 161.71, audioUrl: 'assets/music/airbag'},
-                  { title: 'Green', duration: 103.96, audioUrl: 'assets/music/green'},
-                  { title: 'Red', duration: 268.45, audioUrl: 'assets/music/red'},
-                  { title: 'Pink', duration: 153.14, audioUrl: 'assets/music/pink'},
-                  { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/magenta'}
-                  // {title: 'Airbag', duration:'3:43'},
-                  // {title: 'Paranoid Android', duration:'4;44'},
-                  // {title: 'Subterranean Homesick Alien', duration:'6:23'},
-                  // {title: 'Exit Music', duration:'8:32'},
-                  // {title: 'Let Down', duration:'5:15'},
-                  // {title: 'Karma Police', duration:'3:35'},
-                  // {title: 'Fitter Happier', duration:'2:25'},
-                  // {title: 'Electioneering', duration:'5:55'}
-                ]}
-        var album2 =
-              {
-                id:1,
-                title: 'Information Retrieved',
-                artist: 'Pinback',
-                label: 'Alternative',
-                year: '2012',
-                albumArtUrl: 'assets/images/album_covers/002.png',
-                songs: [
-                  {title: 'Proceed To Memory', duration:'3:43'},
-                  {title: 'Glide', duration:'4;44'},
-                  {title: 'Drawstring', duration:'6:23'},
-                  {title: 'Sherman', duration:'5:32'},
-                  {title: 'His Phase', duration:'5:65'},
-                  {title: 'Diminished', duration:'5:65'},
-                  {title: 'True North', duration:'5:65'}
-                ]}
-        var album3 =
-              {
-                id:2,
-                title: 'The Chief Assassin To The Sinister',
-                artist: 'Three Mile Pilot',
-                label: 'Rock',
-                year: '1995',
-                albumArtUrl: 'assets/images/album_covers/004.png',
-                songs: [
-                  {title: 'Shang Vs. Hanger', duration:'3:43'},
-                  {title: 'Circumcised', duration:'4;44'},
-                  {title: 'Aqua-Magnetic', duration:'6:23'},
-                  {title: 'The Chief Assassin to the Sinister', duration:'5:32'},
-                  {title: '97-MT', duration:'5:65'}
-                ]}
-        var album4 =
-              {
-              id:3,
-              title: 'Lonesome Dreams',
-              artist: 'Lord Huron',
-              label: 'Alternative',
-              year: '2012',
-              albumArtUrl: 'assets/images/album_covers/001.png',
-              songs: [
-                {title: 'Ends of the Earth', duration:'3:43'},
-                {title: 'Time to Run', duration:'4;44'},
-                {title: 'Lonesome Dreams', duration:'6:23'},
-                {title: 'She Lit a Fire', duration:'5:32'},
-                {title: 'I Will Be Back One Day', duration:'5:65'}
-              ]}
-        var catalog = [album1, album2, album3, album4]
-
-        var albumPicasso = {
-            id:0,
-            title: 'The Colors',
-            artist: 'Pablo Picasso',
-            label: 'Cubism',
-            year: '1881',
-            albumArtUrl: '/assets/images/album_covers/20.png',
-            songs: [
-                { title: 'Blue', duration: 161.71, audioUrl: 'assets/music/blue'},
-                { title: 'Green', duration: 103.96, audioUrl: 'assets/music/green'},
-                { title: 'Red', duration: 268.45, audioUrl: 'assets/music/red'},
-                { title: 'Pink', duration: 153.14, audioUrl: 'assets/music/pink'},
-                { title: 'Magenta', duration: 374.22, audioUrl: 'assets/music/magenta'}
-            ]
-        };
-        var albumMarconi = {
-            id:1,
-            title: 'The Numbers',
-            artist: 'Number Man',
-            label: 'EM',
-            year: '1909',
-            albumArtUrl: '/assets/images/album_covers/19.png',
-            songs: [
-              { title: 'one', duration: 161.71, audioUrl: 'assets/music/blue'},
-              { title: 'two', duration: 103.96, audioUrl: 'assets/music/green'},
-              { title: 'three', duration: 268.45, audioUrl: 'assets/music/red'},
-              { title: 'four', duration: 153.14, audioUrl: 'assets/music/pink'},
-              { title: 'five', duration: 374.22, audioUrl: 'assets/music/magenta'}
-            ]
-        };
-    //console.log(albumPicasso);
-        var albumss = [albumPicasso, albumMarconi];
+            {title: 'Photographs', duration:235, audioUrl: 'assets/music/Photographs'},
+            {title: 'Baby, I', duration:227, audioUrl: 'assets/music/BabyI'},
+            {title: 'Cars', duration:219, audioUrl: 'assets/music/Cars'}
+          ]
+    };
+    var catalog = [SummerInAbaddon, StrangeTrails, OkComputer, SummerWinter]
 
     Fixtures.getAlbum = function(){
       var chosenAlbumId = $rootScope.getAlbumId;
-      return albumss[chosenAlbumId];
+      return catalog[chosenAlbumId];
     };
     Fixtures.getCollection = function() {
         var albumCollection = [];
-        for (var i=0; i < albumss.length; i++) {
-            albumCollection.push(albumss[i]);
+        for (var i=0; i < catalog.length; i++) {
+            albumCollection.push(catalog[i]);
         }
         return albumCollection;
     };
