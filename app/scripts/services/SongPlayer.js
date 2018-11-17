@@ -1,26 +1,16 @@
 (function(){
   function SongPlayer($rootScope, $stateParams, Fixtures){
-    var SongPlayer = {}; //this service returns this object making public
 
-    /**
-    * @desc current album
-    * @type {Object}
-    */
     $rootScope.getAlbumId = $stateParams.getAlbumId;
-    var currentAlbum = Fixtures.getAlbum();
-    console.log($rootScope.getAlbumId);
 
-    /**
-    * @desc Buzz object audio file
-    * @type {Object}
-    */
+    $rootScope.$watch('getAlbumId', function(album){ //$watch makes sure album change is registered.
+       currentAlbum = Fixtures.getAlbum();
+     });
+
+    var SongPlayer = {};
+
     var currentBuzzObject = null;
 
-    /**
-    * @function setSong
-    * @desc Stops current song and loads new audio file/currentBuzzObject
-    * @param {Object} song
-    */
     var setSong = function(song) {
         if (currentBuzzObject) {
           stopSong(SongPlayer.currentSong);
@@ -38,59 +28,26 @@
         SongPlayer.currentSong = song;
      };
 
-
-     /**
-     * @function playSong
-     * @desc Plays current song and sets to true
-     * @param {Object} song
-     */
-     var playSong = function(song) {
+    var playSong = function(song) {
          currentBuzzObject.play();
          song.playing = true;
      };
 
-     /**
-     @function stopSong
-     @desc stops current song/sets to null
-     @param {Object} song
-     */
-     var stopSong = function(song){
+    var stopSong = function(song){
        currentBuzzObject.stop();
        song.playing = null;
      };
 
-     /**
-     * @function getSongIndex
-     * @desc gets index of song
-     * @param {Object} song
-     */
      var getSongIndex = function(song){
        return currentAlbum.songs.indexOf(song);
      };
 
-     /**
-     * @desc Active Song object
-     * @type {Object}
-     */
      SongPlayer.currentSong = null;
 
-     /**
-     * @desc Current playback time (in seconds) of currently playing song
-     * @type {Number}
-     */
      SongPlayer.currentTime = null;
 
-     /**
-     * @desc current Volume
-     * @type {Number}
-     */
      SongPlayer.volume = null;
 
-     /**
-     * @function play
-     * @desc Plays current song if paused, or selected song
-     * @param {Object} song
-     */
      SongPlayer.play = function(song) {
         song = song || SongPlayer.currentSong;
         if (SongPlayer.currentSong !== song) {
@@ -103,22 +60,12 @@
         }
      };
 
-     /**
-     * @function pause
-     * @desc Pauses current song
-     * @param {Object} song
-     */
      SongPlayer.pause = function(song) {
         song = song || SongPlayer.currentSong;
          currentBuzzObject.pause();
          song.playing = false;
      };
 
-     /**
-     * @function previous
-     * @desc goes to previous song
-     * @param -> none
-     */
      SongPlayer.previous = function(){
        var currentSongIndex = getSongIndex(SongPlayer.currentSong);
        currentSongIndex--;
@@ -131,12 +78,7 @@
        }
      };
 
-      /**
-      @function next song
-      @desc plays next song
-      @param -> none
-      */
-      SongPlayer.next = function(){
+     SongPlayer.next = function(){
         var currentSongIndex = getSongIndex(SongPlayer.currentSong);
         currentSongIndex++;
         if(currentSongIndex > currentAlbum.songs.length){
@@ -148,23 +90,13 @@
         }
       };
 
-      /**
-      * @function setCurrentTime
-      * @desc Set current time (in seconds) of currently playing song
-      * @param {Number} time
-      */
-      SongPlayer.setCurrentTime = function(time) { //checks if currentBuzzObject, if so uses 'setTime' to set to seconds
+     SongPlayer.setCurrentTime = function(time) { //checks if currentBuzzObject, if so uses 'setTime' to set to seconds
         if (currentBuzzObject) {
           currentBuzzObject.setTime(time);
         }
       };
 
-      /**
-      * @function setVolume
-      * @desc sets Volume
-      * @param {Number} Volume
-      */
-      SongPlayer.setVolume = function(volume){
+     SongPlayer.setVolume = function(volume){
         if(currentBuzzObject){
           currentBuzzObject.setVolume(volume);
         }
