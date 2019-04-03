@@ -1,7 +1,5 @@
+.DS_Store
 node_modules/
 bower_components/
 .idea/
 .sass-cache/
-.DS_Store
-READMEBP.txt
-BLOC-JAMS-ANGULAR.pdf
