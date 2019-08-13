@@ -1,11 +1,14 @@
 -ACCESS-
-$ npm start (localhost:3000)
+ -$ npm start (localhost:3000)
 
-note: $ npm update
-
--BUILDNOTES/FEATURES-
+-FEATURES-
+ -
 
 -ISSUES-
+ -
 
--LOG-
-animations not running 3/16/18
+-FIX-
+ -
+
+-NOTES-
+ -
